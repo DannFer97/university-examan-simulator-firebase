@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app='mainApp'>
+  <head>
+    <title>Estudiante</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+  
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link href="../css/quizzer.css" type="text/css" rel="stylesheet">
+
+    <script src="../public/js/jquery-2.2.0.min.js" ></script>
+    <script src='../public/js/angular.min.js'></script>
+    <script src='../public/js/w3.js'></script>
+    
+    <script src='../controllers/mainController.js' ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+
+      
+  </head>
+  <body ng-controller='mainController' >
+    <header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="actual"><a href="index.html">Atras</a></li>
+             
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+
+     <div class="grid">
+  <button class=' fa fa-google-plus-square w3-text-red w3-xlarge' style='text-decoration: none ' ng-click='Literatura ()'>Literatura</button>
+  <button class='fa fa-google-plus-square w3-text-red w3-xlarge' style='text-decoration: none 'ng-click='Matematicas ()'>Mátematica</button>
+  <button class=' fa fa-google-plus-square w3-text-red w3-xlarge' style='text-decoration: none ' ng-click='CNaturales ()'>Ciencias Naturales</button>
+  <button class='fa fa-google-plus-square w3-text-red w3-xlarge' style='text-decoration: none 'ng-click='CSociales ()'>Ciencias Sociales</button>
+
+</div>
+
+<div class= "w3-display-top">
+
+           <div class="oscuro">
+           <h3>Instrucciones</h3>
+            <p>En este momento veras, cuatro cuadros con las cuatro materias que necesitas practicar para estar listo para dar el exámen de admisión de tu Universidad de preferencia. 
+            </p>
+            <p> Cada exámen tiene la duración de 30 min, si no terminas en ese tiempo, se te calificará hasta donde hayas respondido.
+            </p> 
+            <p> Una vez empezado un tema tendrá que ser culminarlo, caso contrario al cambiar de tema, las preguntas ya respondidas serán eliminadas y tendras que volver a empezar desde cero
+            </p>
+            <p> Cuando termines cada examen, en la esquina superior derecha podra dirifirte a los exámenes de las demas materias o podras dirigirte al menú principal
+            </p>
+
+
+          </div>
+        
+
+</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="../app.js"></script>
+
+<section id="cajas">
+      <div class="contenedor">
+        <div class="caja">
+          <img src="../img/logo_deee.png">
+          <h3>DEEE</h3>
+          <p>Departamento de Electrica y Electronica</p>
+        </div>
+        <div class="caja">
+          <img src="../img/logo_ESPE.png">
+          <h3>ESPE</h3>
+          <p>Universidad de las Fuerzas Armadas ESPE</p>
+        </div>
+        <div class="caja">
+          <img src="../img/logo_firebase.png">
+          <h3>FIREBASE</h3>
+          <p>Built with Firebase</p>
+        </div>
+      </div>
+    </section>
+  
+
+  </body>
+</html>

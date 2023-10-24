@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html ng-app='userApp'>
+  <head>
+    <title>Estudiante</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+  
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link href="../css/quizzer.css" type="text/css" rel="stylesheet">
+
+    <script src="../public/js/jquery-2.2.0.min.js" ></script>
+    <script src='../public/js/angular.min.js'></script>
+    <script src='../public/js/w3.js'></script>
+    
+    <script src='../controllers/userController.js' ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+
+
+
+  
+
+      
+  </head>
+  <body ng-controller='userController' >
+    <header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+        </div>
+        <nav>
+          
+        </nav>
+      </div>
+
+
+      <!-- Perfil del Usuario -->
+              <div class='w3-container w3-left w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-left:2%; max-width: 100px' ng-controller='userController'>
+                <a href=""><img src='{{userImgSource}}' alt="user" class='w3-circle'  style='width: 100%'></a>
+                <div class='w3-dropdown-content w3-bar-block w3-card-4 w3-black'>
+                      <a href="#" class="w3-bar-item w3-button w3-hover-teal" onclick="w3.show('#modalUser')"><i class='fa fa-edit'></i> Perfil</a>
+                      <a href="" class="w3-bar-item w3-button w3-hover-teal" ng-click='userLogout()'><i class='fa fa-sign-out'></i> Cerrar Sesión</a>
+                </div>
+              </div>
+
+<!-- Modal del perfil del usuario -->
+        <div id="modalUser" class="w3-modal" ng-controller='userController'>
+                <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:500px">
+
+                  <div class="w3-center"><br>
+                    <span onclick="w3.hide('#modalUser')" class="w3-button w3-xlarge w3-transparent w3-display-topright w3-hover-none" title="Close Modal">×</span>
+                    <a href=''><img id='imgUserProfile' src='{{userImgSource}}' alt="placeholder+image" style="width:30%" class="w3-circle w3-margin-top"> </a>
+                  </div>
+
+                  <form class="w3-container">
+                    <div class="w3-section">
+                      <label><b>Nombre Completo</b></label>
+                      <input id='userNameInput' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Nombre completo" name="usrname" required/>
+                      <label><b>Email</b></label>
+                      <input id='userEmailInput' class="w3-input w3-border w3-margin-bottom" type="email" placeholder="email" name="email" required/>
+                      <label><b>Password</b></label>
+                      <input id='userPasswordInput' class="w3-input w3-border" type="password" placeholder="Password" name="psw"/>
+                      <input type="file" id="my_file" style="display: none;" />
+                      <p class='w3-red w3-text-white w3-center'>{{errorMsg}}</p>
+                      <button class="w3-button w3-block w3-green w3-section w3-padding w3-hover-green" type="submit" ng-click='updateUser()'>Actualizar</button>
+                    </div>
+                  </form>
+
+                </div>
+            </div>
+        
+
+          
+
+
+    </header>
+    
+
+     <div class="grid">
+  <button class=' fa fa-google-plus-square w3-text-red w3-xlarge' style='text-decoration: none ' ng-click='Examen ()'>Comenzar Examen</button>
+  
+
+</div>
+
+
+
+
+<aside id="boletin">
+           <div class="oscuro">
+            <h3>Instrucciones</h3>
+            <p>En este momento se encuentra en el menú principal de su panel de Estudiante
+            </p>
+            <p>Haciendo click en el botón de "Comenzar Examen" este lo redirigirá a el banner de materias, de las cuales existe un examen por cada materia
+            </p>
+            <p>En la parte izquierda tendrá acceso a la información de su perfil, en este podrá actulizar su nombre,contraseña y clave, siempre y cuando no haya ingresado con su cuenta de google  
+            </p>
+
+          </div>
+        </aside>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="app.js"></script>
+<section id="cajas">
+      <div class="contenedor">
+        <div class="caja">
+          <img src="../img/logo_deee.png">
+          <h3>DEEE</h3>
+          <p>Departamento de Electrica y Electronica</p>
+        </div>
+        <div class="caja">
+          <img src="../img/logo_ESPE.png">
+          <h3>ESPE</h3>
+          <p>Universidad de las Fuerzas Armadas ESPE</p>
+        </div>
+        <div class="caja">
+          <img src="../img/logo_firebase.png">
+          <h3>FIREBASE</h3>
+          <p>Built with Firebase</p>
+        </div>
+      </div>
+    </section>
+
+<footer>
+      <p>Producto de Unidad, Copyright &copy; 2018</p>
+    </footer>
+  </body>
+</html>
+  
+
+  </body>
+</html>

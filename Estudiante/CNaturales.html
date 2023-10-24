@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app='mainApp'>
+  <head>
+    <title>Estudiante</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link href="../css/quizzer.css" type="text/css" rel="stylesheet">
+
+    <script src="../public/js/jquery-2.2.0.min.js" ></script>
+    <script src="../public/js/underscore-1.8.3.min.js"></script>
+    <script src="../public/js/quizzer2.js"></script>
+    <script src='../public/js/angular.min.js'></script>
+    <script src='../public/js/w3.js'></script>
+    
+    <script src='../controllers/userController.js' ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+
+      
+  </head>
+  <body ng-controller='mainController'>
+    <header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="actual"><a href="Matematicas.html">Matematicas</a></li>
+             
+          </ul>
+          <ul>
+            <li class="actual"><a href="CSociales.html">Ciencias Sociales</a></li>
+             
+          </ul>
+          <ul>
+            <li class="actual"><a href="Literatura.html">Literatura</a></li>
+             
+          </ul>
+          <ul>
+            <li class="actual"><a href="index.html">Menu Principal</a></li>
+             
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+
+<div class="start">
+      <div class="card">
+        <p>¿Listo para comenzar?</p>
+        <button class="start">Comenzar</button>
+      </div>
+    </div>
+    <div class="play">
+      <div class="questions"></div>
+    </div>
+    <div class="finish card">
+     
+      <p>Tu nota es: </p>
+      <p class="final_points">8 puntos</p>
+      <div class="play_again">
+        <button>Volver a intentarlo</button>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="../app.js"></script>
+
+<footer>
+      <p>Producto de Unidad, Copyright &copy; 2018</p>
+    </footer>
+  </body>
+</html>
+
+  </body>
+</html>

@@ -1,0 +1,219 @@
+.grid{
+  display: grid;
+  grid-row-gap: 10px;
+  background-color: red;
+  width: 500px;
+  background-color: #fff;
+  margin: 100px auto 30px auto;
+  border-radius: 6px;
+  text-align: center;
+  padding: 20px;
+
+
+}
+
+body{
+  font: 15px Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+body{
+  font: 15px Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Estilos globales */
+.contenedor{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.boton1{
+  height:38px;
+  background:#e8491d;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.oscuro{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Encabezado **/
+header{
+  background:#24282b;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#1293d4 5px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #marca{
+  float:left;
+}
+
+header #marca h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .resaltado, header .actual a{
+  color:#1293d4;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/* Cabecera con imagen */
+#cabecera{
+  height:100%;
+  width:100%;
+  
+  background:url('../img/ESPE.png') no-repeat center center ;
+  background-size:100% 100%;
+  text-align:center;
+  color:#ffffff;
+}
+
+#cabecera h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#cabecera p{
+  font-size:20px;
+}
+
+/* Formulario */
+
+
+/* Cajas */
+#cajas{
+  margin-top:100px;
+}
+
+#cajas .caja{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#cajas .caja img{
+  width:90px;
+}
+
+/* Lateral */
+aside#lateral{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+aside#lateral1{
+  float:right;
+  width:30%;
+  margin-top:0px;
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/* Servicios */
+ul#IniciarSesion li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#1293d4;
+  text-align: center;
+}
+
+
+/* Estilos para el formulario de contacto */
+
+
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #marca,
+  header nav,
+  header nav li,
+  #boletin h1,
+  #boletin form,
+  #cajas .caja,
+  article#main-col,
+  aside#lateral{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #boletin h1{
+    margin-top:40px;
+  }
+
+  #boletin button{
+    display:block;
+    width:100%;
+  }
+
+  #boletin form input[type="email"]{
+    width:100%;
+    margin-bottom:5px;
+  }
+
+  input, textarea{
+    width: 98%; 
+  }
+}

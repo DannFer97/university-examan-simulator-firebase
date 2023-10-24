@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app='addExamApp'>
+  <head>
+    <title>Administrador</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+  
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link href="../css/quizzer.css" type="text/css" rel="stylesheet">
+
+    <script src="../public/js/jquery-2.2.0.min.js" ></script>
+    <script src='../public/js/angular.min.js'></script>
+    <script src='../public/js/w3.js'></script>
+    
+    <script src='../controllers/AddExamen.js' ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+   <script src='../controllers/firebase.js' ></script>
+
+
+
+  
+
+      
+  </head>
+  <body ng-controller='addExamController' >
+    <header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+          <ul>
+            <li class="actual"><a href="index.html">Atras</a></li> 
+          </ul>
+        </div>
+        <nav>
+          
+        </nav>
+      </div>
+         
+
+    </header>
+
+     <!-- Boton de regreso -->
+             <div >
+                  <div class='w3-container w3-left w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-left:2%; max-width: 100px'>
+                    <a href="index.html" class='w3-opacity w3-jumbo w3-padding w3-center w3-circle'><i class='fa fa-arrow-left'></i></a>
+
+                  </div>
+              </div>
+
+              <!-- Formulario del Contacto -->
+
+              <div class='w3-container w3-light-grey w3-card-4 w3-display-middle' style="width:500px">
+                  <div class="w3-center"><br>
+                        
+                      </div>
+
+                      <form class="w3-container">
+                        <div class="w3-section">
+                          <label><b>Nombre </b></label>
+                          <input id='examNameInput' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba el Nombre del Examen" name="examName" required/>
+                          <label><b>Preguntas </b></label>
+                          <input id='questionInput' class="w3-input w3-border w3-margin-bottom" type="number" placeholder="Escriba el numero de preguntas" name="questionN" required/>
+                          
+                          <p class='w3-green w3-text-pale-green w3-round-xlarge w3-center'>{{okMsg}} </p>
+                          
+                          
+                          <button class="w3-button w3-block w3-green w3-section w3-padding w3-hover-green" type="submit" ng-click='addExam()'>Crear Examen</button>
+                        </div>
+                      </form>
+
+                    </div>
+
+              </div>
+    
+
+  
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="app.js"></script>
+
+  
+
+  </body>
+</html>

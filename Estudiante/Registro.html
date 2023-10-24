@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html ng-app='registerApp'>
+<head >
+
+  <title>Producto de Unidad</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/w3.css">
+  <script src='../public/js/angular.min.js'></script>
+<script src='../public/js/w3.js'></script>
+<script src='../controllers/registerController.js' ></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+</head>
+
+<body ng-controller='registerController'>
+  
+<header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="actual"><a href="LoginEstudiante.html">Atras</a></li>
+            
+            
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<div class= "bgimg w3-display-container w3-animate-opacity w3-text-white w3-center">
+
+
+ <!-- Boton de regreso -->
+              <div >
+                  <div class='w3-container w3-left w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-left:2%; max-width: 100px'>
+                    <a href="LoginEstudiante.html" class='w3-opacity w3-jumbo w3-padding w3-center w3-circle'><i class='fa fa-arrow-left'></i></a>
+
+                  </div>
+              </div>
+
+
+  <div class= "w3-display-top">
+    <h1 class= "w3-black w3-opacity-min">
+      REGISTRO
+    </h1>
+    <hr class= "w3-border-grey" style="margin:auto;width: 40%">
+      <form style="margin:auto;width: 30%">
+        <input type=" email" class="w3-input  w3-padding w3-round-xlarge w3-margin-bottom" placeholder='Email' required ng-model='emailRegisterInput'>
+        <input class="w3-input  w3-padding w3-round-xlarge w3-margin-bottom" type="password" placeholder='Password' required ng-model='passwordRegisterInput'>
+
+
+        <p class='w3-red w3-text-white w3-round-large w3-opacity-min'>{{errorMsg}}</p>
+        
+        <button  class = 'w3 button w3-red w3-round-xlarge w3-hover w3-hover-red w3 w3-opacity-min' ng-click='registerUser ()'>Registrarse</button>
+
+        
+      </form>
+    
+  </div>
+
+
+
+<section id="cajas">
+      <div class="contenedor">
+        <div class="caja">
+          <img src="../img/logo_deee.png">
+          <h3>DEEE</h3>
+          <p>Departamento de Electrica y Electronica</p>
+        </div>
+        <div class="caja">
+          <img src="../img/logo_ESPE.png">
+          <h3>ESPE</h3>
+          <p>Universidad de las Fuerzas Armadas ESPE</p>
+        </div>
+        <div class="caja">
+          <img src="../img/logo_firebase.png">
+          <h3>FIREBASE</h3>
+          <p>Built with Firebase</p>
+        </div>
+      </div>
+    </section>
+
+<footer>
+      <p>Producto de Unidad, Copyright &copy; 2018</p>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="app.js"></script>
+
+  
+
+
+
+
+
+
+
+</body>
+</html>

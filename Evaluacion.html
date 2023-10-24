@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app='userApp'>
+  <head>
+    <title>Evaluacion</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link href="css/quizzer.css" type="text/css" rel="stylesheet">
+
+    <script src="/public/js/jquery-2.2.0.min.js" ></script>
+    <script src="/public/js/underscore-1.8.3.min.js"></script>
+    <script src="/public/js/quizzer.js"></script>
+    <script src='/public/js/angular.min.js'></script>
+    <script src='/public/js/w3.js'></script>
+    
+    <script src='/controllers/userController.js' ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+
+
+
+  
+
+      
+  </head>
+  <body ng-controller='userController' >
+    <header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+        </div>
+        <nav>
+          
+        </nav>
+      </div>
+
+
+      <div class="bgimg w3-display-container w3-animate-opacity">
+        <div class='w3-container w3-left w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-left:2%,max-width: 50px '  >
+          <a href=""><img src='{{userImgSource}}' alt="user" class='w3-circle' style='width: 55%'> ></a>
+          <div class='w3-dropdown-content  w3-transparent w3-bar-block w3-card-4 w3-black'>
+              <a href="#" class="w3-bar-item w3-button w3-hover-teal" onclick="w3.show('#modalUser')"><i class='fa fa-edit'></i> Perfil</a>
+              <a href="" class="w3-transparent w3-bar-item w3-button w3-hover-teal" ng-click='userLogout()'><i class='fa fa-sign-out'></i>Cerrar Sesión</a>
+            
+
+
+          </div>
+          
+          </div>
+
+        </div>
+        
+
+          <div id="modalUser" class="w3-modal" ng-controller='userController'>
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width: 500px">
+              
+              <div class="w3-center"><br>
+                <span onclick="w3.hide('#modalUser')" class="w3-button w3-xlarge w3-transparent w3-display-topright w3-hover-none" title="Close Modal">x</span>
+                <a><img id='imgUserProfile' src='{{userImgSource}}' alt="placeholder+image" style="width: 30%" class="w3-circle w3-margin-top"></a>
+                
+              </div>
+              <form class="w3-container">
+                <div class="w3-section">
+                  <label><b>Nombre Completo</b></label>
+                  <input id='userNameInput' class="w3-input w3-border w3-margin-botton" type="text" placeholder="Nombre Completo" name="usrname" required />
+                  <label><b>Email</b></label>
+                  <input id='userEmailInput'class="w3-input w3-border w3-margin-botton" type="text" placeholder="email" name="email" required />
+                  <label><b>Password</b></label>
+                  <input id='userPasswordInput' class="w3-input w3-border " type="password" placeholder="Password" name="psw"  />
+                  <input id="my_file" type="file"  style="display: none;" />
+                  <p class="w3-red w3-text-white w3-center">{{errorMsg}}</p>
+                  <button class="w3-botton w3-block w3-green w3-section w3-padding w3-hover-green" type="submit" ng-click='updateUser ()'>Actualizar</button>
+                </div>
+                
+              </form>
+              
+            </div>
+            
+          </div>
+
+     
+      
+      
+      
+
+
+    </header>
+    <div class="start">
+      <div class="card">
+        <p>¿Listo para comenzar?</p>
+        <button class="start">Comenzar</button>
+      </div>
+    </div>
+    <div class="play">
+      <div class="questions"></div>
+    </div>
+    <div class="finish card">
+     
+      <p>Tu nota es: </p>
+      <p class="final_points">8 puntos</p>
+      <div class="play_again">
+        <button>Volver a intentarlo</button>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="app.js"></script>
+
+  
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app='questionApp'>
+  <head>
+    <title>Administrador</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+  
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    <link href="../css/quizzer.css" type="text/css" rel="stylesheet">
+
+    <script src="../public/js/jquery-2.2.0.min.js" ></script>
+    <script src='../public/js/angular.min.js'></script>
+    <script src='../public/js/w3.js'></script>
+    
+    <script src='../controllers/question.js' ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+   <script src='../controllers/firebase.js' ></script>
+
+
+
+  
+
+      
+  </head>
+  <body ng-controller='questionController' >
+    <header>
+      <div class="contenedor">
+        <div id="marca">
+          <h1><span class="resaltado">ESPE</span> Producto de Unidad</h1>
+          
+        </div>
+        <nav>
+          <ul>
+            <li class="actual"><a href="index.html">Atras</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+         
+
+    </header>
+
+              <!-- Formulario del Contacto -->
+
+              <div class='w3-container w3-light-grey w3-card-4 w3-display-middle' style="width:500px">
+                  <div class="w3-center"><br>
+                        
+                      </div>
+
+                      <form class="w3-container">
+                        <div class="w3-section">
+                          <label><b>Selecionar Examen </b></label>
+                          <input id='selectInput' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba el Nombre del Examen" name="selectTest" required/>
+                          <label><b>Pregunta </b></label>
+                          <input id='questionInput' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba la pregunta" name="question" required/>
+                          <label><b>Respuesta 1 </b></label>
+                          <input id='answer1Input' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba la pregunta" name="answer1" required/>
+                          <label><b>Respuesta 2 </b></label>
+                          <input id='answer2Input' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba la pregunta" name="answer2" required/>
+                          <label><b>Respuesta 3 </b></label>
+                          <input id='answer3Input' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba la pregunta" name="answer3" required/>
+                          <label><b>Respuesta 4 </b></label>
+                          <input id='answer4Input' class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Escriba la pregunta" name="answer4" required/>
+                          <label><b>Respuesta Correcta </b></label>
+                          <input id='correctAnswerInput' class="w3-input w3-border w3-margin-bottom" type="number" placeholder="Escriba la pregunta" name="correctAnwser" required/>
+                          
+                          <p class='w3-green w3-text-pale-green w3-round-xlarge w3-center'>{{okMsg}} </p>
+                          
+                          
+                          <button class="w3-button w3-block w3-green w3-section w3-padding w3-hover-green" type="submit" ng-click='addQuestion()'>Crear Examen</button>
+                        </div>
+                      </form>
+
+                    </div>
+
+              </div>
+    
+
+  
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBFSU3thK26JlrlbAUSnFkDp90ar7Tveag",
+    authDomain: "proyecto-integrador-eb979.firebaseapp.com",
+    databaseURL: "https://proyecto-integrador-eb979.firebaseio.com",
+    projectId: "proyecto-integrador-eb979",
+    storageBucket: "proyecto-integrador-eb979.appspot.com",
+    messagingSenderId: "857744384425"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="app.js"></script>
+
+  
+
+  </body>
+</html>

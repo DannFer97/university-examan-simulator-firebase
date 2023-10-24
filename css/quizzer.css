@@ -1,0 +1,190 @@
+
+body {
+	 font: 15px Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #ccc;
+}
+
+
+.contenedor{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+header{
+  background:#24282b;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#1293d4 5px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #marca{
+  float:left;
+}
+
+header #marca h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .resaltado, header .actual a{
+  color:#1293d4;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+
+header .title {
+	background:#24282b;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#1293d4 5px solid;
+}
+
+header h1, header h2 {
+	margin: 0;
+}
+
+header div.countdown {
+	float: right;
+	
+}
+
+header div.points {
+	float: left;
+	-webkit-transition: color 0.5s;
+    transition: color 0.5s;
+
+}
+
+header div.points.animate.right {
+	color:#1293d4;
+}
+
+header div.points.animate.wrong {
+	color: #bf0000;
+}
+
+header div.countdown, header div.points {
+	font-weight: bold;
+	margin: 10px;
+	color:#1293d4;
+	padding: 0px;
+	font-size: 26px;
+}
+
+.card {
+	background-color: red;
+	width: 500px;
+	background-color: #fff;
+	margin: 100px auto 30px auto;
+	border-radius: 6px;
+	text-align: center;
+	padding: 20px;
+}
+
+div.start .card {
+	display: block;
+}
+
+div.start .card p, .question.card span.question {
+	font-size: 25px;
+}
+
+.card.question {
+	display: none;
+}
+
+.card.question.active {
+	display: block;
+}
+
+.card.question .options {
+	padding: 0;
+	list-style: none;
+	margin-top: 35px;
+}
+
+.card.question .options > li {
+	margin: 10px 80px;
+}
+
+.card.question .options > li label {
+	background-color: #7ED2CF;
+	display: block;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+.card.question .options > li label:hover {
+	background-color: #8EE8E5;
+}
+
+.card.question .options > li input:checked + label {
+	background-color: #4D8E8C !important;
+	color: #fff;
+}
+
+.card.question .options > li input {
+	opacity: 0;
+	display: none;
+}
+
+.finish {
+	display: none;
+}
+
+.card.finish p {
+	font-size: 22px;
+}
+
+.card.finish .final_points {
+	font-size: 40px;
+	font-weight: bolder;
+}
+
+.play_again,
+button.start {
+	width: 200px;
+	margin: 0 auto 20px auto;
+	color: #fff;
+}
